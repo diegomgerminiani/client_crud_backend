@@ -12,7 +12,7 @@
  ## Rodando como serverless localmente
  ```npm run sls:test```
    
- ## Rodando como serverless online
+ ## Rodando como serverless online na AWS
  ```npm run sls:up```
     
  ## Removendo aplicação da AWS
