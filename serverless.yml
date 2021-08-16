@@ -1,0 +1,57 @@
+
+service: clientcrudbackend
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  region: sa-east-1
+  memorySize: 256
+  stage: dev
+  environment:
+    NODE_ENV: development
+    SERVER_PORT: 3000
+    DB_URL: bolt://54.157.51.209:7687
+    DB_USER: neo4j
+    DB_PASS: wood-winding-accesses
+
+plugins:
+  - serverless-offline
+
+functions:
+  createClient:
+    handler: src/serverless.serverless
+    events: 
+      - http:
+          path: /clients
+          method: POST
+          cors: true
+  getClients:
+    handler: src/serverless.serverless
+    events: 
+      - http:
+          path: /clients
+          method: GET
+          cors: true
+  getClient:
+    handler: src/serverless.serverless
+    events: 
+      - http:
+          path: /clients/{proxy+}
+          method: GET
+          cors: true
+  updateClient:
+    handler: src/serverless.serverless
+    events: 
+      - http:
+          path: /clients
+          method: PUT
+          cors: true
+  deleteClient:
+    handler: src/serverless.serverless
+    events: 
+      - http:
+          path: /clients/{proxy+}
+          method: DELETE
+          cors: true

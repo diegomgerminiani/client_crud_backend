@@ -1,0 +1,29 @@
+{
+  "name": "client_crud_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server",
+  "scripts": {
+    "server": "nodemon src/server.js",
+    "sls:test": "sls offline start",
+    "sls:up": "sls deploy --verbose",
+    "sls:down": "sls remove --verbose"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.968.0",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "neo4j-driver": "^4.3.2",
+    "nodemon": "^2.0.7",
+    "serverless-http": "^2.7.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^8.0.0"
+  }
+}
