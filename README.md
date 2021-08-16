@@ -4,6 +4,8 @@
  
  Optei por construir uma aplicação hibrida, onde fosse possível aplicar as rotas como Lambda Functions na AWS (Deploy atual), mas que também rodasse como servidor.
  
+ Os dados foram persistidos no banco de dados não-relacional NEO4J.
+ 
  ## Rodando o servidor
  ```npm run server```
   
